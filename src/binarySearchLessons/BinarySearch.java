@@ -1,19 +1,18 @@
 package binarySearchLessons;
 
+import java.util.Scanner;
+
 class BinarySearch {
-    int binarySearch(int a[], int l, int r, int x) {
+    int binarySearch( int l, int r, int x) {
         while (l <= r) {
             int m = (l + r) / 2;
 
-            // Return the element itself if found
-            if (a[m] == x) {
-                return a[m];
+            if (m == x) {
+                return m;
 
-                // If element is smaller than mid, move to the left subarray
-            } else if (a[m] > x) {
+            } else if (m > x) {
                 r = m - 1;
 
-                // If element is greater than mid, move to the right subarray
             } else {
                 l = m + 1;
             }
@@ -26,11 +25,11 @@ class BinarySearch {
     public static void main(String args[]) {
         BinarySearch ob = new BinarySearch();
 
-        int a[] = { 2, 3, 4, 10, 40 };
-        int n = a.length;
-        int x = 10;
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
 
-        int res = ob.binarySearch(a, 0, n - 1, x);
+
+        int res = ob.binarySearch(n, 0,1000);
 
         if (res == -1)
             System.out.println("Element not present");
