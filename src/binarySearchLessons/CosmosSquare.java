@@ -25,4 +25,4 @@ public class CosmosSquare {
         scanner.close();
     }
 }
-
+//1397
