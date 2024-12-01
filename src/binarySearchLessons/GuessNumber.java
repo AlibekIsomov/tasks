@@ -6,7 +6,7 @@ public class GuessNumber {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        int l = 1, r = (int) 1e9, x;
+        int l = 1, r = 10000, x;
         char c;
 
         while (true) {
