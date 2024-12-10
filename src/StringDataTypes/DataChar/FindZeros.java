@@ -1,25 +1,21 @@
 package StringDataTypes.DataChar;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.io.IOException;
+import java.util.Scanner;
 
 public class FindZeros {
-    public static void main(String[] args) throws IOException {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        int count = 0;
+    public static void main(String[] args) {
+        int cnt = 0;
 
-        // Read input until EOF
-        String line;
-        while ((line = reader.readLine()) != null) {
-            for (char c : line.toCharArray()) {
-                if (c == '0') {
-                    count++;
-                }
+        Scanner scanner = new Scanner(System.in);
+        String c = scanner.next();
+        for (char ch : c.toCharArray()) {
+            if (ch == '0') {
+                cnt++;
             }
         }
 
-        // Print the count of zeros
-        System.out.println(count);
+        System.out.println(cnt);
+        scanner.close();
     }
 }
+
